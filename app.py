@@ -9,7 +9,7 @@ from geographiclib.geodesic import Geodesic
 # function to load data
 @st.cache_data
 def load_data():
-    file_path = '/Users/ryangawronski/Documents/IU/SUMMER2024/DSCI590-Data_Viz/Project/app/airport_locations.csv'
+    file_path = 'airport_locations.csv'
     return pd.read_csv(file_path)
 
 # Load the airport locations data
