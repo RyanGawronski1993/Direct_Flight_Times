@@ -100,7 +100,9 @@ for airport, details in airports.items():
                 icon = folium.Icon(prefix='fa', icon="plane-departure", color="green")
             elif details['coords'] == tuple(st.session_state.selected_points[1].values()):
                 icon = folium.Icon(prefix='fa', icon="plane-arrival", color="red")
-        folium.Marker(location=details['coords'], popup=airport, tooltip=details['city'], icon=icon).add_to(map)
+        
+        tooltip_text = f"City: {details['city']}<br>Airport: {airport}<br>Coordinates: {details['coords'][0]}, {details['coords'][1]}"
+        folium.Marker(location=details['coords'], popup=airport, tooltip=tooltip_text, icon=icon).add_to(map)
 
 
 
