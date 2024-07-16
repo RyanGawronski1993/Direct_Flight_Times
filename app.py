@@ -62,7 +62,7 @@ def get_great_circle_path(coords_1, coords_2, num_points=100):
 
 # Streamlit app
 st.title("Interactive Flight Duration Map")
-st.write("Click on two airports on the map to calculate the direct flight duration")
+st.write("Double-click on two airports on the map to calculate the direct flight duration")
 
 
 
