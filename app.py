@@ -25,8 +25,6 @@ airports = {
 }
 
 
-
-
 def calculate_flight(coords_1, coords_2):
     distance = int(geodesic(coords_1, coords_2).miles)
     if distance < 700:
@@ -43,7 +41,6 @@ def calculate_flight(coords_1, coords_2):
     hours = int(flight_duration_hours)
     minutes = int((flight_duration_hours - hours) * 60)
     return distance, (hours, minutes), haul_type
-
 
 
 
