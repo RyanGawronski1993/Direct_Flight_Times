@@ -69,7 +69,7 @@ st.write("Double-click on two airports on the map to calculate the direct flight
 # reset session state
 if st.button("Reset Selections"):
     st.session_state.clear()
-    st.experimental_rerun()
+    st.rerun()
 
 
 # initialize session state
@@ -184,5 +184,5 @@ if st_map['last_object_clicked'] is not None:
             # get great-circle path points
             st.session_state.flight_path = get_great_circle_path(coords_1, coords_2)
         
-        st.experimental_rerun()
+        st.rerun()
 
