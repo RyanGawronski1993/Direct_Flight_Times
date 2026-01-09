@@ -6,6 +6,8 @@ import pandas as pd
 import numpy as np
 from geographiclib.geodesic import Geodesic
 
+
+
 # function to load data
 @st.cache_data
 def load_data():
@@ -99,7 +101,12 @@ for airport, details in airports.items():
                 icon = folium.Icon(prefix='fa', icon="plane-arrival", color="red")
         
         tooltip_text = f"City: {details['city']}<br>Airport: {airport}<br>Coordinates: {details['coords'][0]}, {details['coords'][1]}"
-        folium.Marker(location=details['coords'], popup=airport, tooltip=tooltip_text, icon=icon).add_to(map)
+        folium.Marker(
+            location=details['coords'],
+            tooltip=tooltip_text,
+            icon=folium.Icon(color="blue", icon="info-sign")
+            ).add_to(map)
+
 
 
 
